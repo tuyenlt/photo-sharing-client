@@ -6,6 +6,10 @@ import ActionMenu from "./ActionMenu";
 function TopBar() {
 	const navigate = useNavigate();
 	const { user } = useAuth();
+
+	if (!user) {
+		return null;
+	}
 	return (
 		<div className="fixed z-10 bg-white w-full h-20 top-0 border-b flex justify-between items-center px-6">
 			<div className="flex items-center">

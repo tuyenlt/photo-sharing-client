@@ -6,7 +6,7 @@ import Login from './pages/login/Login'
 import UserDetail from './components/UserDetail'
 import UserPhotos from './components/UserPhotos'
 import UploadPhoto from './pages/uploadPhoto/UploadPhoto'
-import { Toaster } from 'sonner'
+import Home from './pages/home/Home'
 
 function App() {
 	return (
@@ -19,7 +19,7 @@ function App() {
 						<Route path='/users/:userId' element={<UserDetail />} />
 						<Route path='/user-photos/:userId' element={<UserPhotos />} />
 						<Route path='/upload-photo' element={<UploadPhoto />} />
-						<Route path='/*' element={<div className='text-3xl text-center mt-10'>404 Not Found</div>} />
+						<Route path='/*' element={<Home />} />
 					</Route>
 				</Routes>
 			</AuthProvider>
